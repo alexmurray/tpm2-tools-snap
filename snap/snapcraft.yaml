@@ -1,0 +1,136 @@
+name: tpm2-tools
+version: 3.x
+summary: TPM 2.0 utilities
+description: |
+  TPM (Trusted Platform Module) 2.0 tools based on tpm2-tss.
+
+  NOTE: The tpm2 interface is only available on Ubuntu Core so this snap
+  does not support classic Ubuntu
+confinement: strict
+grade: stable
+
+apps:
+  activatecredential:
+    command: bin/tpm2_activatecredential
+    plugs: [tpm2]
+  certify:
+    command: bin/tpm2_certify
+    plugs: [tpm2]
+  create:
+    command: bin/tpm2_create
+    plugs: [tpm2]
+  createprimary:
+    command: bin/tpm2_createprimary
+    plugs: [tpm2]
+  encryptdecrypt:
+    command: bin/tpm2_encryptdecrypt
+    plugs: [tpm2]
+  evictcontrol:
+    command: bin/tpm2_evictcontrol
+    plugs: [tpm2]
+  getmanufec:
+    command: bin/tpm2_getmanufec
+    plugs: [tpm2]
+  getpubak:
+    command: bin/tpm2_getpubak
+    plugs: [tpm2]
+  getpubek:
+    command: bin/tpm2_getpubek
+    plugs: [tpm2]
+  getrandom:
+    command: bin/tpm2_getrandom
+    plugs: [tpm2]
+  hash:
+    command: bin/tpm2_hash
+    plugs: [tpm2]
+  hmac:
+    command: bin/tpm2_hmac
+    plugs: [tpm2]
+  pcrlist:
+    command: bin/tpm2_pcrlist
+    plugs: [tpm2]
+  load:
+    command: bin/tpm2_load
+    plugs: [tpm2]
+  loadexternal:
+    command: bin/tpm2_loadexternal
+    plugs: [tpm2]
+  makecredential:
+    command: bin/tpm2_makecredential
+    plugs: [tpm2]
+  nvdefine:
+    command: bin/tpm2_nvdefine
+    plugs: [tpm2]
+  nvlist:
+    command: bin/tpm2_nvlist
+    plugs: [tpm2]
+  nvread:
+    command: bin/tpm2_nvread
+    plugs: [tpm2]
+  nvrelease:
+    command: bin/tpm2_nvrelease
+    plugs: [tpm2]
+  nvwrite:
+    command: bin/tpm2_nvwrite
+    plugs: [tpm2]
+  quote:
+    command: bin/tpm2_quote
+    plugs: [tpm2]
+  rc-decode:
+    command: bin/tpm2_rc_decode
+  readpublic:
+    command: bin/tpm2_readpublic
+    plugs: [tpm2]
+  rsadecrypt:
+    command: bin/tpm2_rsadecrypt
+    plugs: [tpm2]
+  rsaencrypt:
+    command: bin/tpm2_rsaencrypt
+    plugs: [tpm2]
+  sign:
+    command: bin/tpm2_sign
+    plugs: [tpm2]
+  takeownership:
+    command: bin/tpm2_takeownership
+    plugs: [tpm2]
+  unseal:
+    command: bin/tpm2_unseal
+    plugs: [tpm2]
+  verifysignature:
+    command: bin/tpm2_verifysignature
+    plugs: [tpm2]
+
+parts:
+  tpm2-tss:
+    plugin: autotools
+    source: https://github.com/tpm2-software/tpm2-tss
+    source-type: git
+    source-branch: 2.2.x
+    build-packages:
+      - autoconf
+      - autoconf-archive
+      - libtool
+      - gcc
+      - g++
+      - libc6-dev
+      - doxygen
+    prime:
+      - -include
+
+  tpm2-tools:
+    plugin: autotools
+    source: https://github.com/tpm2-software/tpm2-tools
+    source-type: git
+    source-branch: 3.X
+    build-packages:
+      - autoconf
+      - autoconf-archive
+      - pkg-config
+      - libcmocka-dev
+      - libcurl4-openssl-dev
+      - libssl-dev
+      - libtool
+    prime:
+      - -include
+    after:
+      - tpm2-tss
