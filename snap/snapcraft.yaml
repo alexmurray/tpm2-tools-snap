@@ -20,14 +20,23 @@ apps:
   create:
     command: bin/tpm2_create
     plugs: [tpm2]
+  createpolicy:
+    command: bin/tpm2_createpolicy
+    plugs: [tpm2]
   createprimary:
     command: bin/tpm2_createprimary
+    plugs: [tpm2]
+  dictionarylockout:
+    command: bin/tpm2_dictionarylockout
     plugs: [tpm2]
   encryptdecrypt:
     command: bin/tpm2_encryptdecrypt
     plugs: [tpm2]
   evictcontrol:
     command: bin/tpm2_evictcontrol
+    plugs: [tpm2]
+  getcap:
+    command: bin/tpm2_getcap
     plugs: [tpm2]
   getmanufec:
     command: bin/tpm2_getmanufec
@@ -47,8 +56,8 @@ apps:
   hmac:
     command: bin/tpm2_hmac
     plugs: [tpm2]
-  pcrlist:
-    command: bin/tpm2_pcrlist
+  listpersistent:
+    command: bin/tpm2_listpersistent
     plugs: [tpm2]
   load:
     command: bin/tpm2_load
@@ -68,11 +77,23 @@ apps:
   nvread:
     command: bin/tpm2_nvread
     plugs: [tpm2]
+  nvreadlock:
+    command: bin/tpm2_nvreadlock
+    plugs: [tpm2]
   nvrelease:
     command: bin/tpm2_nvrelease
     plugs: [tpm2]
   nvwrite:
     command: bin/tpm2_nvwrite
+    plugs: [tpm2]
+  pcrevent:
+    command: bin/tpm2_pcrevent
+    plugs: [tpm2]
+  pcrextend:
+    command: bin/tpm2_pcrextend
+    plugs: [tpm2]
+  pcrlist:
+    command: bin/tpm2_pcrlist
     plugs: [tpm2]
   quote:
     command: bin/tpm2_quote
@@ -88,8 +109,14 @@ apps:
   rsaencrypt:
     command: bin/tpm2_rsaencrypt
     plugs: [tpm2]
+  send:
+    command: bin/tpm2_send
+    plugs: [tpm2]
   sign:
     command: bin/tpm2_sign
+    plugs: [tpm2]
+  startup:
+    command: bin/tpm2_startup
     plugs: [tpm2]
   takeownership:
     command: bin/tpm2_takeownership
