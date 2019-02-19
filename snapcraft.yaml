@@ -13,120 +13,120 @@ base: core18
 apps:
   activatecredential:
     command: bin/tpm2_activatecredential
-    plugs: [tpm2]
+    plugs: [tpm]
   certify:
     command: bin/tpm2_certify
-    plugs: [tpm2]
+    plugs: [tpm]
   create:
     command: bin/tpm2_create
-    plugs: [tpm2]
+    plugs: [tpm]
   createpolicy:
     command: bin/tpm2_createpolicy
-    plugs: [tpm2]
+    plugs: [tpm]
   createprimary:
     command: bin/tpm2_createprimary
-    plugs: [tpm2]
+    plugs: [tpm]
   dictionarylockout:
     command: bin/tpm2_dictionarylockout
-    plugs: [tpm2]
+    plugs: [tpm]
   encryptdecrypt:
     command: bin/tpm2_encryptdecrypt
-    plugs: [tpm2]
+    plugs: [tpm]
   evictcontrol:
     command: bin/tpm2_evictcontrol
-    plugs: [tpm2]
+    plugs: [tpm]
   getcap:
     command: bin/tpm2_getcap
-    plugs: [tpm2]
+    plugs: [tpm]
   getmanufec:
     command: bin/tpm2_getmanufec
-    plugs: [tpm2]
+    plugs: [tpm]
   getpubak:
     command: bin/tpm2_getpubak
-    plugs: [tpm2]
+    plugs: [tpm]
   getpubek:
     command: bin/tpm2_getpubek
-    plugs: [tpm2]
+    plugs: [tpm]
   getrandom:
     command: bin/tpm2_getrandom
-    plugs: [tpm2]
+    plugs: [tpm]
   hash:
     command: bin/tpm2_hash
-    plugs: [tpm2]
+    plugs: [tpm]
   hmac:
     command: bin/tpm2_hmac
-    plugs: [tpm2]
+    plugs: [tpm]
   listpersistent:
     command: bin/tpm2_listpersistent
-    plugs: [tpm2]
+    plugs: [tpm]
   load:
     command: bin/tpm2_load
-    plugs: [tpm2]
+    plugs: [tpm]
   loadexternal:
     command: bin/tpm2_loadexternal
-    plugs: [tpm2]
+    plugs: [tpm]
   makecredential:
     command: bin/tpm2_makecredential
-    plugs: [tpm2]
+    plugs: [tpm]
   nvdefine:
     command: bin/tpm2_nvdefine
-    plugs: [tpm2]
+    plugs: [tpm]
   nvlist:
     command: bin/tpm2_nvlist
-    plugs: [tpm2]
+    plugs: [tpm]
   nvread:
     command: bin/tpm2_nvread
-    plugs: [tpm2]
+    plugs: [tpm]
   nvreadlock:
     command: bin/tpm2_nvreadlock
-    plugs: [tpm2]
+    plugs: [tpm]
   nvrelease:
     command: bin/tpm2_nvrelease
-    plugs: [tpm2]
+    plugs: [tpm]
   nvwrite:
     command: bin/tpm2_nvwrite
-    plugs: [tpm2]
+    plugs: [tpm]
   pcrevent:
     command: bin/tpm2_pcrevent
-    plugs: [tpm2]
+    plugs: [tpm]
   pcrextend:
     command: bin/tpm2_pcrextend
-    plugs: [tpm2]
+    plugs: [tpm]
   pcrlist:
     command: bin/tpm2_pcrlist
-    plugs: [tpm2]
+    plugs: [tpm]
   quote:
     command: bin/tpm2_quote
-    plugs: [tpm2]
+    plugs: [tpm]
   rc-decode:
     command: bin/tpm2_rc_decode
   readpublic:
     command: bin/tpm2_readpublic
-    plugs: [tpm2]
+    plugs: [tpm]
   rsadecrypt:
     command: bin/tpm2_rsadecrypt
-    plugs: [tpm2]
+    plugs: [tpm]
   rsaencrypt:
     command: bin/tpm2_rsaencrypt
-    plugs: [tpm2]
+    plugs: [tpm]
   send:
     command: bin/tpm2_send
-    plugs: [tpm2]
+    plugs: [tpm]
   sign:
     command: bin/tpm2_sign
-    plugs: [tpm2]
+    plugs: [tpm]
   startup:
     command: bin/tpm2_startup
-    plugs: [tpm2]
+    plugs: [tpm]
   takeownership:
     command: bin/tpm2_takeownership
-    plugs: [tpm2]
+    plugs: [tpm]
   unseal:
     command: bin/tpm2_unseal
-    plugs: [tpm2]
+    plugs: [tpm]
   verifysignature:
     command: bin/tpm2_verifysignature
-    plugs: [tpm2]
+    plugs: [tpm]
 
 parts:
   tpm2-tss:
