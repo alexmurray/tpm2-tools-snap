@@ -142,6 +142,7 @@ parts:
       - g++
       - libc6-dev
       - doxygen
+      - libgcrypt20-dev
     prime:
       - -include
 
