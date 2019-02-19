@@ -4,8 +4,10 @@ summary: TPM 2.0 utilities
 description: |
   TPM (Trusted Platform Module) 2.0 tools based on tpm2-tss.
 
-  NOTE: The tpm2 interface is only available on Ubuntu Core so this snap
-  does not support classic Ubuntu
+  NOTE: The tpm interface is not automatically connected and so needs to
+  be manually connected after installation:
+
+  snap connect tpm2-tools-alexmurray:tpm :tpm
 confinement: strict
 grade: stable
 base: core18
