@@ -8,6 +8,7 @@ description: |
   does not support classic Ubuntu
 confinement: strict
 grade: stable
+base: core18
 
 apps:
   activatecredential:
