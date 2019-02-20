@@ -7,7 +7,7 @@ description: |
   NOTE: The tpm interface is not automatically connected and so needs to
   be manually connected after installation:
 
-  snap connect tpm2-tools-alexmurray:tpm :tpm
+      snap connect tpm2-tools-alexmurray:tpm :tpm
 confinement: strict
 grade: stable
 base: core18
