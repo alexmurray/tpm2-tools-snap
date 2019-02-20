@@ -162,6 +162,7 @@ parts:
       - libcurl4-openssl-dev
       - libssl-dev
       - libtool
+      - pandoc
     stage-packages:
       - libasn1-8-heimdal
       - libcurl3
