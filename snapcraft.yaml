@@ -136,7 +136,7 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tss
     source-type: git
-    source-branch: 2.2.x
+    source-branch: 2.1.0
     build-packages:
       - autoconf
       - autoconf-archive
