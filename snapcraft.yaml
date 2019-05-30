@@ -1,6 +1,5 @@
 name: tpm2-tools-alexmurray
-version: 3.x
-version-script: git -C parts/tpm2-tools/build describe --tags
+version: 3.1.4
 summary: TPM 2.0 utilities
 description: |
   TPM (Trusted Platform Module) 2.0 tools based on tpm2-tss.
@@ -136,7 +135,7 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tss
     source-type: git
-    source-branch: 2.1.0
+    source-tag: 2.2.3
     build-packages:
       - autoconf
       - autoconf-archive
@@ -152,7 +151,7 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tools
     source-type: git
-    source-branch: 3.X
+    source-tag: 3.1.4
     build-packages:
       - autoconf
       - autoconf-archive
