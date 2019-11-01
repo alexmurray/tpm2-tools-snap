@@ -1,5 +1,5 @@
 name: tpm2-tools-alexmurray
-version: 3.2.1
+version: 4.0.1
 summary: TPM 2.0 utilities
 description: |
   TPM (Trusted Platform Module) 2.0 tools based on tpm2-tss.
@@ -19,8 +19,26 @@ apps:
   certify:
     command: bin/tpm2_certify
     plugs: [tpm]
+  changeauth:
+    command: bin/tpm2_changeauth
+    plugs: [tpm]
+  checkquote:
+    command: bin/tpm2_checkquote
+    plugs: [tpm]
+  clear:
+    command: bin/tpm2_clear
+    plugs: [tpm]
+  clearcontrol:
+    command: bin/tpm2_clearcontrol
+    plugs: [tpm]
   create:
     command: bin/tpm2_create
+    plugs: [tpm]
+  createak:
+    command: bin/tpm2_createak
+    plugs: [tpm]
+  createek:
+    command: bin/tpm2_createek
     plugs: [tpm]
   createpolicy:
     command: bin/tpm2_createpolicy
@@ -40,17 +58,14 @@ apps:
   getcap:
     command: bin/tpm2_getcap
     plugs: [tpm]
-  getmanufec:
-    command: bin/tpm2_getmanufec
-    plugs: [tpm]
-  getpubak:
-    command: bin/tpm2_getpubak
-    plugs: [tpm]
-  getpubek:
-    command: bin/tpm2_getpubek
+  getekcertificate:
+    command: bin/tpm2_getekcertificate
     plugs: [tpm]
   getrandom:
     command: bin/tpm2_getrandom
+    plugs: [tpm]
+  gettestresult:
+    command: bin/tpm2_gettestresult
     plugs: [tpm]
   hash:
     command: bin/tpm2_hash
@@ -58,8 +73,14 @@ apps:
   hmac:
     command: bin/tpm2_hmac
     plugs: [tpm]
-  listpersistent:
-    command: bin/tpm2_listpersistent
+  hierarchycontrol:
+    command: bin/tpm2_hierarchycontrol
+    plugs: [tpm]
+  import:
+    command: bin/tpm2_import
+    plugs: [tpm]
+  incrementalselftest:
+    command: bin/tpm2_incrementalselftest
     plugs: [tpm]
   load:
     command: bin/tpm2_load
@@ -73,8 +94,8 @@ apps:
   nvdefine:
     command: bin/tpm2_nvdefine
     plugs: [tpm]
-  nvlist:
-    command: bin/tpm2_nvlist
+  nvincrement:
+    command: bin/tpm2_nvincrement
     plugs: [tpm]
   nvread:
     command: bin/tpm2_nvread
@@ -82,11 +103,17 @@ apps:
   nvreadlock:
     command: bin/tpm2_nvreadlock
     plugs: [tpm]
-  nvrelease:
-    command: bin/tpm2_nvrelease
+  nvreadpublic:
+    command: bin/tpm2_nvreadpublic
+    plugs: [tpm]
+  nvundefine:
+    command: bin/tpm2_nvundefine
     plugs: [tpm]
   nvwrite:
     command: bin/tpm2_nvwrite
+    plugs: [tpm]
+  pcrallocate:
+    command: bin/tpm2_pcrallocate
     plugs: [tpm]
   pcrevent:
     command: bin/tpm2_pcrevent
@@ -94,14 +121,39 @@ apps:
   pcrextend:
     command: bin/tpm2_pcrextend
     plugs: [tpm]
-  pcrlist:
-    command: bin/tpm2_pcrlist
+  pcrread:
+    command: bin/tpm2_pcrread
+    plugs: [tpm]
+  print:
+    command: bin/tpm2_print
+    plugs: [tpm]
+  policyauthorize:
+    command: bin/tpm2_policyauthorize
+    plugs: [tpm]
+  policycommandcode:
+    command: bin/tpm2_policycommandcode
+    plugs: [tpm]
+  policyduplicationselect:
+    command: bin/tpm2_policyduplicationselect
+    plugs: [tpm]
+  policylocality:
+    command: bin/tpm2_policylocality
+    plugs: [tpm]
+  policypcr:
+    command: bin/tpm2_policypcr
+    plugs: [tpm]
+  policyor:
+    command: bin/tpm2_policyor
+    plugs: [tpm]
+  policypassword:
+    command: bin/tpm2_policypassword
+    plugs: [tpm]
+  policysecret:
+    command: bin/tpm2_policysecret
     plugs: [tpm]
   quote:
     command: bin/tpm2_quote
     plugs: [tpm]
-  rc-decode:
-    command: bin/tpm2_rc_decode
   readpublic:
     command: bin/tpm2_readpublic
     plugs: [tpm]
@@ -111,17 +163,23 @@ apps:
   rsaencrypt:
     command: bin/tpm2_rsaencrypt
     plugs: [tpm]
+  selftest:
+    command: bin/tpm2_selftest
+    plugs: [tpm]
   send:
     command: bin/tpm2_send
     plugs: [tpm]
   sign:
     command: bin/tpm2_sign
     plugs: [tpm]
+  startauthsession:
+    command: bin/tpm2_startauthsession
+    plugs: [tpm]
   startup:
     command: bin/tpm2_startup
     plugs: [tpm]
-  takeownership:
-    command: bin/tpm2_takeownership
+  stirrandom:
+    command: bin/tpm2_stirrandom
     plugs: [tpm]
   unseal:
     command: bin/tpm2_unseal
@@ -151,7 +209,7 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tools
     source-type: git
-    source-tag: 3.2.1
+    source-tag: 4.0.1
     build-packages:
       - autoconf
       - autoconf-archive
