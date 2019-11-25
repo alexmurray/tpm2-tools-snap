@@ -1,5 +1,5 @@
 name: tpm2-tools-alexmurray
-version: 4.0.1
+version: "4.1"
 summary: TPM 2.0 utilities
 description: |
   TPM (Trusted Platform Module) 2.0 tools based on tpm2-tss.
@@ -210,7 +210,7 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tools
     source-type: git
-    source-tag: 4.0.1
+    source-tag: "4.1"
     build-packages:
       - autoconf
       - autoconf-archive
