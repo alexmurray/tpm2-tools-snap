@@ -1,5 +1,5 @@
 name: tpm2-tools-alexmurray
-version: "4.1"
+version: "4.3.0"
 summary: TPM 2.0 utilities
 description: |
   TPM (Trusted Platform Module) 2.0 tools based on tpm2-tss.
@@ -193,7 +193,7 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tss
     source-type: git
-    source-tag: 2.3.1
+    source-tag: 2.4.2
     build-packages:
       - autoconf
       - autoconf-archive
@@ -201,28 +201,12 @@ parts:
       - gcc
       - g++
       - libc6-dev
+      - libgcrypt20-dev
+      - libjson-c-dev
       - doxygen
       - libltdl-dev
-    prime:
-      - -include
-
-  tpm2-tools:
-    plugin: autotools
-    source: https://github.com/tpm2-software/tpm2-tools
-    source-type: git
-    source-tag: "4.1"
-    build-packages:
-      - autoconf
-      - autoconf-archive
-      - pkg-config
-      - libcmocka-dev
-      - libcurl4-openssl-dev
-      - libssl-dev
-      - libtool
-      - pandoc
     stage-packages:
       - libasn1-8-heimdal
-      - libcurl3
       - libcurl4
       - libgssapi3-heimdal
       - libhcrypto4-heimdal
@@ -237,6 +221,24 @@ parts:
       - librtmp1
       - libsasl2-2
       - libwind0-heimdal
+    prime:
+      - -include
+
+  tpm2-tools:
+    plugin: autotools
+    source: https://github.com/tpm2-software/tpm2-tools
+    source-type: git
+    source-tag: $SNAPCRAFT_PROJECT_VERSION
+    build-packages:
+      - autoconf
+      - autoconf-archive
+      - pkg-config
+      - libcmocka-dev
+      - libcurl4-openssl-dev
+      - libssl-dev
+      - libtool
+      - pandoc
+      - uuid-dev
     prime:
       - -include
     after:
