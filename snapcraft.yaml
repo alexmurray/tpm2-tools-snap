@@ -49,11 +49,17 @@ apps:
   dictionarylockout:
     command: bin/tpm2_dictionarylockout
     plugs: [tpm]
+  duplicate:
+    command: bin/tpm2_duplicate
+    plugs: [tpm]
   encryptdecrypt:
     command: bin/tpm2_encryptdecrypt
     plugs: [tpm]
   evictcontrol:
     command: bin/tpm2_evictcontrol
+    plugs: [tpm]
+  flushcontext:
+    command: bin/tpm2_flushcontext
     plugs: [tpm]
   getcap:
     command: bin/tpm2_getcap
@@ -153,6 +159,9 @@ apps:
     plugs: [tpm]
   quote:
     command: bin/tpm2_quote
+    plugs: [tpm]
+  rc-decode:
+    command: bin/tpm2_rc_decode
     plugs: [tpm]
   readpublic:
     command: bin/tpm2_readpublic
