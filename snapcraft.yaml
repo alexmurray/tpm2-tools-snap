@@ -10,311 +10,311 @@ description: |
       snap connect tpm2-tools-alexmurray:tpm :tpm
 confinement: strict
 grade: stable
-base: core18
+base: core20
 
 apps:
   tpm2:
-    command: bin/tpm2
+    command: usr/bin/tpm2
     plugs: [tpm]
   certifyX509certutil:
-    command: bin/tpm2_certifyX509certutil
+    command: usr/bin/tpm2_certifyX509certutil
     plugs: [tpm]
   checkquote:
-    command: bin/tpm2_checkquote
+    command: usr/bin/tpm2_checkquote
     plugs: [tpm]
   eventlog:
-    command: bin/tpm2_eventlog
+    command: usr/bin/tpm2_eventlog
     plugs: [tpm]
   print:
-    command: bin/tpm2_print
+    command: usr/bin/tpm2_print
     plugs: [tpm]
   rc-decode:
-    command: bin/tpm2_rc_decode
+    command: usr/bin/tpm2_rc_decode
     plugs: [tpm]
   activatecredential:
-    command: bin/tpm2_activatecredential
+    command: usr/bin/tpm2_activatecredential
     plugs: [tpm]
   certify:
-    command: bin/tpm2_certify
+    command: usr/bin/tpm2_certify
     plugs: [tpm]
   changeauth:
-    command: bin/tpm2_changeauth
+    command: usr/bin/tpm2_changeauth
     plugs: [tpm]
   changeeps:
-    command: bin/tpm2_changeeps
+    command: usr/bin/tpm2_changeeps
     plugs: [tpm]
   changepps:
-    command: bin/tpm2_changepps
+    command: usr/bin/tpm2_changepps
     plugs: [tpm]
   clear:
-    command: bin/tpm2_clear
+    command: usr/bin/tpm2_clear
     plugs: [tpm]
   clearcontrol:
-    command: bin/tpm2_clearcontrol
+    command: usr/bin/tpm2_clearcontrol
     plugs: [tpm]
   clockrateadjust:
-    command: bin/tpm2_clockrateadjust
+    command: usr/bin/tpm2_clockrateadjust
     plugs: [tpm]
   create:
-    command: bin/tpm2_create
+    command: usr/bin/tpm2_create
     plugs: [tpm]
   createak:
-    command: bin/tpm2_createak
+    command: usr/bin/tpm2_createak
     plugs: [tpm]
   createek:
-    command: bin/tpm2_createek
+    command: usr/bin/tpm2_createek
     plugs: [tpm]
   createpolicy:
-    command: bin/tpm2_createpolicy
+    command: usr/bin/tpm2_createpolicy
     plugs: [tpm]
   setprimarypolicy:
-    command: bin/tpm2_setprimarypolicy
+    command: usr/bin/tpm2_setprimarypolicy
     plugs: [tpm]
   createprimary:
-    command: bin/tpm2_createprimary
+    command: usr/bin/tpm2_createprimary
     plugs: [tpm]
   dictionarylockout:
-    command: bin/tpm2_dictionarylockout
+    command: usr/bin/tpm2_dictionarylockout
     plugs: [tpm]
   duplicate:
-    command: bin/tpm2_duplicate
+    command: usr/bin/tpm2_duplicate
     plugs: [tpm]
   getcap:
-    command: bin/tpm2_getcap
+    command: usr/bin/tpm2_getcap
     plugs: [tpm]
   gettestresult:
-    command: bin/tpm2_gettestresult
+    command: usr/bin/tpm2_gettestresult
     plugs: [tpm]
   encryptdecrypt:
-    command: bin/tpm2_encryptdecrypt
+    command: usr/bin/tpm2_encryptdecrypt
     plugs: [tpm]
   evictcontrol:
-    command: bin/tpm2_evictcontrol
+    command: usr/bin/tpm2_evictcontrol
     plugs: [tpm]
   flushcontext:
-    command: bin/tpm2_flushcontext
+    command: usr/bin/tpm2_flushcontext
     plugs: [tpm]
   getekcertificate:
-    command: bin/tpm2_getekcertificate
+    command: usr/bin/tpm2_getekcertificate
     plugs: [tpm]
   getrandom:
-    command: bin/tpm2_getrandom
+    command: usr/bin/tpm2_getrandom
     plugs: [tpm]
   gettime:
-    command: bin/tpm2_gettime
+    command: usr/bin/tpm2_gettime
     plugs: [tpm]
   hash:
-    command: bin/tpm2_hash
+    command: usr/bin/tpm2_hash
     plugs: [tpm]
   hierarchycontrol:
-    command: bin/tpm2_hierarchycontrol
+    command: usr/bin/tpm2_hierarchycontrol
     plugs: [tpm]
   hmac:
-    command: bin/tpm2_hmac
+    command: usr/bin/tpm2_hmac
     plugs: [tpm]
   import:
-    command: bin/tpm2_import
+    command: usr/bin/tpm2_import
     plugs: [tpm]
   incrementalselftest:
-    command: bin/tpm2_incrementalselftest
+    command: usr/bin/tpm2_incrementalselftest
     plugs: [tpm]
   load:
-    command: bin/tpm2_load
+    command: usr/bin/tpm2_load
     plugs: [tpm]
   loadexternal:
-    command: bin/tpm2_loadexternal
+    command: usr/bin/tpm2_loadexternal
     plugs: [tpm]
   makecredential:
-    command: bin/tpm2_makecredential
+    command: usr/bin/tpm2_makecredential
     plugs: [tpm]
   nvdefine:
-    command: bin/tpm2_nvdefine
+    command: usr/bin/tpm2_nvdefine
     plugs: [tpm]
   nvextend:
-    command: bin/tpm2_nvextend
+    command: usr/bin/tpm2_nvextend
     plugs: [tpm]
   nvincrement:
-    command: bin/tpm2_nvincrement
+    command: usr/bin/tpm2_nvincrement
     plugs: [tpm]
   nvreadpublic:
-    command: bin/tpm2_nvreadpublic
+    command: usr/bin/tpm2_nvreadpublic
     plugs: [tpm]
   nvread:
-    command: bin/tpm2_nvread
+    command: usr/bin/tpm2_nvread
     plugs: [tpm]
   nvreadlock:
-    command: bin/tpm2_nvreadlock
+    command: usr/bin/tpm2_nvreadlock
     plugs: [tpm]
   nvundefine:
-    command: bin/tpm2_nvundefine
+    command: usr/bin/tpm2_nvundefine
     plugs: [tpm]
   nvwrite:
-    command: bin/tpm2_nvwrite
+    command: usr/bin/tpm2_nvwrite
     plugs: [tpm]
   nvwritelock:
-    command: bin/tpm2_nvwritelock
+    command: usr/bin/tpm2_nvwritelock
     plugs: [tpm]
   nvsetbits:
-    command: bin/tpm2_nvsetbits
+    command: usr/bin/tpm2_nvsetbits
     plugs: [tpm]
   pcrallocate:
-    command: bin/tpm2_pcrallocate
+    command: usr/bin/tpm2_pcrallocate
     plugs: [tpm]
   pcrevent:
-    command: bin/tpm2_pcrevent
+    command: usr/bin/tpm2_pcrevent
     plugs: [tpm]
   pcrextend:
-    command: bin/tpm2_pcrextend
+    command: usr/bin/tpm2_pcrextend
     plugs: [tpm]
   pcrread:
-    command: bin/tpm2_pcrread
+    command: usr/bin/tpm2_pcrread
     plugs: [tpm]
   pcrreset:
-    command: bin/tpm2_pcrreset
+    command: usr/bin/tpm2_pcrreset
     plugs: [tpm]
   policypcr:
-    command: bin/tpm2_policypcr
+    command: usr/bin/tpm2_policypcr
     plugs: [tpm]
   policyauthorize:
-    command: bin/tpm2_policyauthorize
+    command: usr/bin/tpm2_policyauthorize
     plugs: [tpm]
   policyauthorizenv:
-    command: bin/tpm2_policyauthorizenv
+    command: usr/bin/tpm2_policyauthorizenv
     plugs: [tpm]
   policynv:
-    command: bin/tpm2_policynv
+    command: usr/bin/tpm2_policynv
     plugs: [tpm]
   policycountertimer:
-    command: bin/tpm2_policycountertimer
+    command: usr/bin/tpm2_policycountertimer
     plugs: [tpm]
   policyor:
-    command: bin/tpm2_policyor
+    command: usr/bin/tpm2_policyor
     plugs: [tpm]
   policynamehash:
-    command: bin/tpm2_policynamehash
+    command: usr/bin/tpm2_policynamehash
     plugs: [tpm]
   policytemplate:
-    command: bin/tpm2_policytemplate
+    command: usr/bin/tpm2_policytemplate
     plugs: [tpm]
   policycphash:
-    command: bin/tpm2_policycphash
+    command: usr/bin/tpm2_policycphash
     plugs: [tpm]
   policypassword:
-    command: bin/tpm2_policypassword
+    command: usr/bin/tpm2_policypassword
     plugs: [tpm]
   policysigned:
-    command: bin/tpm2_policysigned
+    command: usr/bin/tpm2_policysigned
     plugs: [tpm]
   policyticket:
-    command: bin/tpm2_policyticket
+    command: usr/bin/tpm2_policyticket
     plugs: [tpm]
   policyauthvalue:
-    command: bin/tpm2_policyauthvalue
+    command: usr/bin/tpm2_policyauthvalue
     plugs: [tpm]
   policysecret:
-    command: bin/tpm2_policysecret
+    command: usr/bin/tpm2_policysecret
     plugs: [tpm]
   policyrestart:
-    command: bin/tpm2_policyrestart
+    command: usr/bin/tpm2_policyrestart
     plugs: [tpm]
   policycommandcode:
-    command: bin/tpm2_policycommandcode
+    command: usr/bin/tpm2_policycommandcode
     plugs: [tpm]
   policynvwritten:
-    command: bin/tpm2_policynvwritten
+    command: usr/bin/tpm2_policynvwritten
     plugs: [tpm]
   policyduplicationselect:
-    command: bin/tpm2_policyduplicationselect
+    command: usr/bin/tpm2_policyduplicationselect
     plugs: [tpm]
   policylocality:
-    command: bin/tpm2_policylocality
+    command: usr/bin/tpm2_policylocality
     plugs: [tpm]
   quote:
-    command: bin/tpm2_quote
+    command: usr/bin/tpm2_quote
     plugs: [tpm]
   readclock:
-    command: bin/tpm2_readclock
+    command: usr/bin/tpm2_readclock
     plugs: [tpm]
   readpublic:
-    command: bin/tpm2_readpublic
+    command: usr/bin/tpm2_readpublic
     plugs: [tpm]
   rsadecrypt:
-    command: bin/tpm2_rsadecrypt
+    command: usr/bin/tpm2_rsadecrypt
     plugs: [tpm]
   rsaencrypt:
-    command: bin/tpm2_rsaencrypt
+    command: usr/bin/tpm2_rsaencrypt
     plugs: [tpm]
   send:
-    command: bin/tpm2_send
+    command: usr/bin/tpm2_send
     plugs: [tpm]
   selftest:
-    command: bin/tpm2_selftest
+    command: usr/bin/tpm2_selftest
     plugs: [tpm]
   setclock:
-    command: bin/tpm2_setclock
+    command: usr/bin/tpm2_setclock
     plugs: [tpm]
   shutdown:
-    command: bin/tpm2_shutdown
+    command: usr/bin/tpm2_shutdown
     plugs: [tpm]
   sign:
-    command: bin/tpm2_sign
+    command: usr/bin/tpm2_sign
     plugs: [tpm]
   certifycreation:
-    command: bin/tpm2_certifycreation
+    command: usr/bin/tpm2_certifycreation
     plugs: [tpm]
   nvcertify:
-    command: bin/tpm2_nvcertify
+    command: usr/bin/tpm2_nvcertify
     plugs: [tpm]
   startauthsession:
-    command: bin/tpm2_startauthsession
+    command: usr/bin/tpm2_startauthsession
     plugs: [tpm]
   startup:
-    command: bin/tpm2_startup
+    command: usr/bin/tpm2_startup
     plugs: [tpm]
   stirrandom:
-    command: bin/tpm2_stirrandom
+    command: usr/bin/tpm2_stirrandom
     plugs: [tpm]
   testparms:
-    command: bin/tpm2_testparms
+    command: usr/bin/tpm2_testparms
     plugs: [tpm]
   unseal:
-    command: bin/tpm2_unseal
+    command: usr/bin/tpm2_unseal
     plugs: [tpm]
   verifysignature:
-    command: bin/tpm2_verifysignature
+    command: usr/bin/tpm2_verifysignature
     plugs: [tpm]
   setcommandauditstatus:
-    command: bin/tpm2_setcommandauditstatus
+    command: usr/bin/tpm2_setcommandauditstatus
     plugs: [tpm]
   getcommandauditdigest:
-    command: bin/tpm2_getcommandauditdigest
+    command: usr/bin/tpm2_getcommandauditdigest
     plugs: [tpm]
   getsessionauditdigest:
-    command: bin/tpm2_getsessionauditdigest
+    command: usr/bin/tpm2_getsessionauditdigest
     plugs: [tpm]
   geteccparameters:
-    command: bin/tpm2_geteccparameters
+    command: usr/bin/tpm2_geteccparameters
     plugs: [tpm]
   ecephemeral:
-    command: bin/tpm2_ecephemeral
+    command: usr/bin/tpm2_ecephemeral
     plugs: [tpm]
   commit:
-    command: bin/tpm2_commit
+    command: usr/bin/tpm2_commit
     plugs: [tpm]
   ecdhkeygen:
-    command: bin/tpm2_ecdhkeygen
+    command: usr/bin/tpm2_ecdhkeygen
     plugs: [tpm]
   ecdhzgen:
-    command: bin/tpm2_ecdhzgen
+    command: usr/bin/tpm2_ecdhzgen
     plugs: [tpm]
   zgen2phase:
-    command: bin/tpm2_zgen2phase
+    command: usr/bin/tpm2_zgen2phase
     plugs: [tpm]
   sessionconfig:
-    command: bin/tpm2_sessionconfig
+    command: usr/bin/tpm2_sessionconfig
     plugs: [tpm]
   getpolicydigest:
-    command: bin/tpm2_getpolicydigest
+    command: usr/bin/tpm2_getpolicydigest
     plugs: [tpm]
 
 parts:
@@ -322,7 +322,9 @@ parts:
     plugin: autotools
     source: https://github.com/tpm2-software/tpm2-tss
     source-type: git
-    source-tag: 3.1.0
+    source-tag: 3.2.0
+    autotools-configure-parameters:
+      - --prefix=/usr
     build-packages:
       - acl
       - autoconf
@@ -359,6 +361,8 @@ parts:
     source: https://github.com/tpm2-software/tpm2-tools
     source-type: git
     source-tag: $SNAPCRAFT_PROJECT_VERSION
+    autotools-configure-parameters:
+      - --prefix=/usr
     build-packages:
       - autoconf
       - autoconf-archive
